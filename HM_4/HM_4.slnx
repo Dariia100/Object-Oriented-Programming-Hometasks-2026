@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="Task2_2-Workers/Task2_2-Workers.csproj" Id="e174af80-19c2-43fd-933e-1ffac70bf4cb" />
+  <Project Path="Task_3-Converter/Task_3-Converter.csproj" Id="60856717-72fe-46fc-a744-cb3170c350e4" />
+  <Project Path="Task_4-GeographicalObject-2/Task_4-GeographicalObject-2.csproj" Id="e71f3536-e727-48c1-bf34-8b7308ffb0ac" />
+  <Project Path="Task_4-GeographicalObject/Task_4-GeographicalObject.csproj" Id="c28b242a-d1f5-4713-992a-ba51c1a71d3d" />
+  <Project Path="Task_5-Assortment/Task_5-Assortment.csproj" Id="c543acc1-e9ac-48ec-b467-1043e7253957">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

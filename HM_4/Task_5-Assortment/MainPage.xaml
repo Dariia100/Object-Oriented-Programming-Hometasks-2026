@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task_5_Assortment.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Товари"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                x:Name="addClick"
+                Text="Додати товар" 
+                SemanticProperties.Hint="Додає товари"
+                Clicked="OnAddClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="deleteClick"
+                Text="Видалити товар" 
+                SemanticProperties.Hint="Видаляє товари"
+                Clicked="OnDeleteClicked"
+                HorizontalOptions="Fill" />
+            
+            <CollectionView ItemsSource="{Binding GoodsList}">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+            Orientation="Vertical"
+            Span="2"
+            HorizontalItemSpacing="10"
+            VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="10">
+                            <VerticalStackLayout>
+
+                                <Label
+                        Text="{Binding Name}"
+                        FontAttributes="Bold"
+                        FontSize="18" />
+
+                                <Label Text="{Binding Description}" />
+
+                                <Label Text="{Binding Price, StringFormat='Ціна: {0} грн'}" />
+
+                                <Label Text="{Binding Country, StringFormat='Країна: {0}'}" />
+
+                                <Label Text="{Binding Date, StringFormat='Дата вироблення: {0:dd.MM.yyyy}'}" />
+
+                                <Label Text="{Binding ExpDate, StringFormat='Термін придатності: {0:dd.MM.yyyy}'}" />
+
+                                <Label Text="{Binding Count, StringFormat='Кількість: {0}'}" />
+
+                                <Label Text="{Binding UnitOfMeasurement, StringFormat='Одиниця вимірювання: {0}'}" />
+
+                                <Label Text="{Binding Pages, StringFormat='Сторінки: {0}'}" />
+
+                                <Label Text="{Binding PublishHouse, StringFormat='Видавництво: {0}'}" />
+
+                                <Label Text="{Binding Authors, StringFormat='Автори: {0}'}" />
+
+
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
