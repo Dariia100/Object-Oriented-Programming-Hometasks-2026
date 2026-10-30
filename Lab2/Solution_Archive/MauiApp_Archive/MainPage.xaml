@@ -59,6 +59,6 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </VerticalStackLayout>
-    </ScrollView>
+    </ScrollView> 
 </ContentPage>
 

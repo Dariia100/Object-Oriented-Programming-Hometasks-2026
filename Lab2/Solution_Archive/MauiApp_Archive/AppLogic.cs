@@ -262,7 +262,7 @@ namespace MauiApp_Archive
         {
             return _strategy.Search(xml, filter);
         }
-    }
+    } 
 
     public static class XsltHelper
     {

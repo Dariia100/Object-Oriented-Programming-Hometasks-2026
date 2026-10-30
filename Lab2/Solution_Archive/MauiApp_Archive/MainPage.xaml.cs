@@ -74,7 +74,7 @@ namespace MauiApp_Archive
             }
         }
 
-        private void OnSearchClicked(object sender, EventArgs e)
+        private void OnSearchClicked(object? sender, EventArgs e)
         {
             if (RbLinq.IsChecked)
                 _context.SetStrategy(new LINQ_XML());
@@ -105,7 +105,7 @@ namespace MauiApp_Archive
             }
         }
 
-        private void OnClearClicked(object sender, EventArgs e)
+        private void OnClearClicked(object? sender, EventArgs e)
         {
             AuthorPicker.SelectedItem = null;
             DepartmentPicker.SelectedItem = null;
@@ -121,7 +121,7 @@ namespace MauiApp_Archive
             ResultsCollection.ItemsSource = null;
         }
 
-        private async void OnTransformClicked(object sender, EventArgs e)
+        private async void OnTransformClicked(object? sender, EventArgs e)
         {
             try
             {
@@ -136,9 +136,9 @@ namespace MauiApp_Archive
             {
                 await DisplayAlertAsync("Помилка XSLT", ex.Message, "OK");
             }
-        }
+        } 
 
-        private async void OnExitClicked(object sender, EventArgs e)
+        private async void OnExitClicked(object? sender, EventArgs e)
         {
             bool confirm = await DisplayAlertAsync("Підтвердження", "Чи дійсно ви хочете завершити роботу з програмою?", "Так", "Ні");
             if (confirm)
