@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FacultyArchive>
+	<book BK_ID="1"
+          BK_NAME="Програмна інженерія"
+          BK_TYPE="Навчальний посібник"
+          BK_PUBLISHER="КНУ імені Тараса Шевченка"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра теорії та технології програмування"
+          BK_PAGES="319"
+          BK_YEAR="2008"
+          BK_NOTE="Рекомендовано МОН">
+		<author AU_ID="1" AU_NAME="Лавріщева К.М." />
+	</book>
+	<book BK_ID="2"
+          BK_NAME="Диференціальні рівняння"
+          BK_TYPE="Навчальний посібник"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра обчислювальної математики"
+          BK_PAGES="351"
+          BK_YEAR="2008">
+		<author AU_ID="2" AU_NAME="Гаращенко Ф.Г." />
+		<author AU_ID="3" AU_NAME="Матвієнко Б.Т." />
+		<author AU_ID="4" AU_NAME="Харченко І.І." />
+	</book>
+	<book BK_ID="3"
+          BK_NAME="Системне моделювання"
+          BK_TYPE="Навчальний посібник"
+          BK_PUBLISHER="КНУ імені Тараса Шевченка"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра теоретичної кібернетики"
+          BK_PAGES="90"
+          BK_YEAR="2022">
+		<author AU_ID="5" AU_NAME="Карнаух Т.О." />
+		<author AU_ID="6" AU_NAME="Ставровський А.Б." />
+	</book>
+	<book BK_ID="4"
+          BK_NAME="Математична логіка"
+          BK_TYPE="Навчальний посібник"
+          BK_PUBLISHER="ВПЦ 'Київський університет'"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра теорії та технології програмування"
+          BK_PAGES="304"
+          BK_YEAR="2022"
+          BK_EDITION="2-ге видання">
+		<author AU_ID="7" AU_NAME="Шкільняк С.С." />
+	</book>
+	<book BK_ID="5"
+          BK_NAME="Транспортна задача"
+          BK_TYPE="Навчальний посібник"
+          BK_PUBLISHER="Наукове видавництво 'ТВіМС'"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра інтелектуальних програмних систем"
+          BK_PAGES="120"
+          BK_YEAR="2010">
+		<author AU_ID="8" AU_NAME="Іксанов О.М." />
+		<author AU_ID="9" AU_NAME="Шевченко В.І." />
+	</book>
+	<book BK_ID="6"
+          BK_NAME="Транспортна задача. Частина 2"
+          BK_TYPE="Навчальний посібник"
+          BK_PUBLISHER="Наукове видавництво 'ТВіМС'"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра інтелектуальних програмних систем"
+          BK_PAGES="120"
+          BK_YEAR="2011">
+		<author AU_ID="10" AU_NAME="Іксанов О.М." />
+	</book>
+	<book BK_ID="7"
+          BK_NAME="Вступ до програмування С++."
+          BK_TYPE="Навчальний посібник"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра теоретичної кібернетики"
+          BK_PAGES="99"
+          BK_YEAR="2018">
+		<author AU_ID="11" AU_NAME="Карнаух Т.О." />
+	</book>
+	<book BK_ID="8"
+          BK_NAME="Двадцята проблема Гільберта"
+          BK_TYPE="Монографія"
+          BK_PUBLISHER="ТОВ 'І.Д. Вільямс'"
+          BK_FACULTY="Факультет комп'ютерних наук та кібернетики"
+          BK_DEPARTMENT="Кафедра теоретичної кібернетики"
+          BK_PAGES="192"
+          BK_YEAR="2009"
+          BK_NOTE="Фундаментальне дослідження">
+		<author AU_ID="12" AU_NAME="Ляшко С.І." />
+		<author AU_ID="13" AU_NAME="Номіровський Д.А." />
+		<author AU_ID="14" AU_NAME="Петунін Ю.І." />
+		<author AU_ID="15" AU_NAME="Семенов В.В." />
+	</book>
+</FacultyArchive>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MauiApp_Archive.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="Електронний архів факультету"
+                  FontSize="22"
+                  FontAttributes="Bold"
+                  HorizontalOptions="Center"
+                  Margin="0, 10, 0, 10"/>
+
+            <Grid ColumnDefinitions="*, *" ColumnSpacing="8">
+                <Picker x:Name="AuthorPicker" Title="Оберіть автора" Grid.Column="0"/>
+                <Picker x:Name="DepartmentPicker" Title="Оберіть кафедру" Grid.Column="1"/>
+            </Grid>
+
+            <Entry x:Name="KeywordEntry" Placeholder="Пошук за ключовим словом у назві..."/>
+
+            <Label Text="Види матеріалу:" FontAttributes="Bold" Margin="0, 5, 0, 0"/>
+            <CollectionView x:Name="MaterialTypesCollection"
+                           SelectionMode="None"
+                           HeightRequest="45">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="12"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Spacing="4" VerticalOptions="Center">
+                            <CheckBox IsChecked="{Binding IsSelected}"/>
+                            <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Спосіб обробки XML (Стратегія):" FontAttributes="Bold" Margin="0, 5, 0, 0"/>
+            <HorizontalStackLayout Spacing="15">
+                <RadioButton x:Name="RbLinq" Content="LINQ to XML" IsChecked="True"/>
+                <RadioButton x:Name="RbDom" Content="DOM API"/>
+                <RadioButton x:Name="RbSax" Content="SAX API"/>
+            </HorizontalStackLayout>
+
+            <Grid ColumnDefinitions="*, *, *, *" ColumnSpacing="8" Margin="0, 8, 0, 0">
+                <Button Grid.Column="0" Text="Пошук" Clicked="OnSearchClicked" BackgroundColor="#27ae60" TextColor="White"/>
+                <Button Grid.Column="1" Text="Очистити" Clicked="OnClearClicked" BackgroundColor="#7f8c8d" TextColor="White"/>
+                <Button Grid.Column="2" Text="HTML" Clicked="OnTransformClicked" BackgroundColor="#e67e22" TextColor="White"/>
+                <Button Grid.Column="3" Text="Вихід" Clicked="OnExitClicked" BackgroundColor="#c0392b" TextColor="White"/>
+            </Grid>
+
+            <Label Text="Результати пошуку:" FontAttributes="Bold" Margin="0, 8, 0, 0"/>
+            <CollectionView x:Name="ResultsCollection" HeightRequest="260">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="#bdc3c7" StrokeShape="RoundRectangle 6" Padding="10" Margin="0, 4">
+                            <Label Text="{Binding DisplayInfo}" FontSize="13"/>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
