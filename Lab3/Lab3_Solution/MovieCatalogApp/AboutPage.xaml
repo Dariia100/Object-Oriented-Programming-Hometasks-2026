@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieCatalogApp.AboutPage"
+             Title="AboutPage">
+    <VerticalStackLayout Spacing="12" Padding="25" VerticalOptions="Center">
+
+        <Label Text="Лабораторна робота 3" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Label Text="Диспетчер JSON-файлів для каталогу фільмів" FontSize="15" HorizontalOptions="Center" />
+        <Label Text="Автор: Бурдига Дарія" FontSize="14" />
+        <Label Text="Курс: 2, Група: К-24" FontSize="14" />
+        <Label Text="Рік: 2026" FontSize="14" />
+        <Label Text="Опис: Застосунок виконує серіалізацію, десеріалізацію JSON, фільтрацію фільмів через LINQ та відображення їх в таблиці Grid." FontSize="14" />
+        <Button Text="Закрити" Margin="0,15,0,0" Clicked="OnCloseClicked" HorizontalOptions="Center" WidthRequest="110" />
+    </VerticalStackLayout>
+</ContentPage>
+

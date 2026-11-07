@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MovieCatalogApp"
+             x:Class="MovieCatalogApp.MainPage"
+             Title="Каталог фільмів">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Padding="10" RowSpacing="10">
+        <HorizontalStackLayout Grid.Row="0" Spacing="8">
+            <Button Text="Відкрити JSON" Clicked="OnOpenJsonClicked" />
+            <Button Text="Зберегти JSON" Clicked="OnSaveJsonClicked" />
+            <Button Text="Додати фільм" Clicked="OnAddMovieClicked" />
+            <Button Text="Про програму" Clicked="OnAboutClicked" BackgroundColor="#512BD4" />
+        </HorizontalStackLayout>
+
+        <Border Grid.Row="1" Stroke="LightGray" Padding="8">
+            <Grid ColumnDefinitions="*, *, *, Auto, Auto" ColumnSpacing="6">
+                <Entry x:Name="TitleFilterEntry" Placeholder="Назва фільму: " Grid.Column="0" />
+                <Picker x:Name="GenrePicker" Title="Жанр: " Grid.Column="1" />
+                <Entry x:Name="MaxAgeFilterEntry" Keyboard="Numeric" Placeholder="Макс. вік" Grid.Column="2" />
+                <Button Text="Пошук" Clicked="OnFilterClicked" Grid.Column="3" />
+                <Button Text="Скинути" Clicked="OnResetClicked" BackgroundColor="Gray" Grid.Column="4" />
+            </Grid>
+            
+        </Border>
+        <Grid Grid.Row="2" ColumnDefinitions="40, 2*, *, 60, 60, 2*, 140" BackgroundColor="#E0E0E0" Padding="5">
+            <Label Text="ID" FontAttributes="Bold" Grid.Column="0" />
+            <Label Text="Назва" FontAttributes="Bold" Grid.Column="1" />
+            <Label Text="Жанр" FontAttributes="Bold" Grid.Column="2" />
+            <Label Text="Рік" FontAttributes="Bold" Grid.Column="3" />
+            <Label Text="Вік" FontAttributes="Bold" Grid.Column="4" />
+            <Label Text="Актори" FontAttributes="Bold" Grid.Column="5" />
+            <Label Text="Дії" FontAttributes="Bold" Grid.Column="6" HorizontalOptions="Center" />
+        </Grid>
+        <CollectionView Grid.Row="3" x:Name="MoviesView" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:Movie">
+                    <Border StrokeThickness="0.5" Stroke="LightGray" Padding="5">
+                        <Grid ColumnDefinitions="40, 2*, *, 60, 60, 2*, 140">
+                            <Label Text="{Binding Id}" VerticalOptions="Center" Grid.Column="0" />
+                            <Label Text="{Binding Title}" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="1" />
+                            <Label Text="{Binding Genre}" VerticalOptions="Center" Grid.Column="2" />
+                            <Label Text="{Binding ReleaseYear}" VerticalOptions="Center" Grid.Column="3" />
+                            <Label Text="{Binding Age}" VerticalOptions="Center" Grid.Column="4" />
+                            <Label Text="{Binding ActorsDisplay}" LineBreakMode="WordWrap" TextColor="Black" VerticalOptions="Center" Grid.Column="5" />
+                            <HorizontalStackLayout Grid.Column="6" Spacing="4" HorizontalOptions="Center">
+                                <Button Text="Ред." HeightRequest="35" Padding="6,0" Clicked="OnEditClicked" CommandParameter="{Binding .}" />
+                                <Button Text="Вид." HeightRequest="35" Padding="6,0" BackgroundColor="Crimson" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label Grid.Row="4" x:Name="StatusLabel" Text="Готово" FontSize="12" TextColor="DimGray" />
+    </Grid>
+</ContentPage>

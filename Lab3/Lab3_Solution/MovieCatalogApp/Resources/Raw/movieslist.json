@@ -1,0 +1,50 @@
+[
+  {
+    "ActorsDisplay": "Leonardo DiCaprio, Tom Hardy, Cillian Murphy",
+    "Id": 1,
+    "movie_title": "Inception",
+    "Genre": "Fantasy",
+    "ReleaseYear": 2010,
+    "MainActors": [
+      "Leonardo DiCaprio",
+      "Tom Hardy",
+      "Cillian Murphy"
+    ]
+  },
+  {
+    "ActorsDisplay": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+    "Id": 2,
+    "movie_title": "Titanic",
+    "Genre": "Drama",
+    "ReleaseYear": 1997,
+    "MainActors": [
+      "Leonardo DiCaprio",
+      "Kate Winslet",
+      "Billy Zane"
+    ]
+  },
+  {
+    "ActorsDisplay": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+    "Id": 3,
+    "movie_title": "Avatar",
+    "Genre": "Fantasy",
+    "ReleaseYear": 2009,
+    "MainActors": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver"
+    ]
+  },
+  {
+    "ActorsDisplay": "Emilie, Justin, Anna",
+    "Id": 4,
+    "movie_title": "Panda",
+    "Genre": "Comedy",
+    "ReleaseYear": 2000,
+    "MainActors": [
+      "Emilie",
+      "Justin",
+      "Anna"
+    ]
+  }
+]

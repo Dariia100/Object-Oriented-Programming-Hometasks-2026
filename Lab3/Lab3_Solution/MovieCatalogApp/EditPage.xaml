@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieCatalogApp.EditPage"
+             Title="Movies Database">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry x:Name="TitleEntry" Placeholder="Назва фільму" />
+        <Entry x:Name="GenreEntry" Placeholder="Жанр" />
+        <Entry x:Name="YearEntry" Keyboard="Numeric" Placeholder="Рік випуску" />
+        <Label Text="Головні актори (3 особи):" FontAttributes="Bold" Margin="0,5,0,0" />
+        <Entry x:Name="Actor1Entry" Placeholder="Актор 1" />
+        <Entry x:Name="Actor2Entry" Placeholder="Актор 2" />
+        <Entry x:Name="Actor3Entry" Placeholder="Актор 3" />
+
+        <HorizontalStackLayout HorizontalOptions="End" Spacing="10" Margin="0,15,0,0">
+            <Button Text="Скасувати" BackgroundColor="Gray" Clicked="OnCancelClicked" />
+            <Button Text="Зберегти" Clicked="OnSaveClicked" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
+
